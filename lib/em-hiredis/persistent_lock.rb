@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module EM::Hiredis
   # A lock that automatically re-acquires a lock before it loses it
   #

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module EventMachine::Hiredis
   class PubsubClient < BaseClient
     PUBSUB_MESSAGES = %w{message pmessage subscribe unsubscribe psubscribe punsubscribe}.freeze

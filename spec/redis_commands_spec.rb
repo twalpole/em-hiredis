@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'spec_helper'
 
 describe EventMachine::Hiredis, "commands" do
@@ -24,7 +25,7 @@ describe EventMachine::Hiredis, "commands" do
   it "stores and retrieves all possible characters at the beginning and the end of a string" do
     connect do |redis|
       (0..255).each do |char_idx|
-        string = "#{char_idx.chr}---#{char_idx.chr}"
+        string = String.new("#{char_idx.chr}---#{char_idx.chr}")
         if RUBY_VERSION > "1.9"
           string.force_encoding("UTF-8")
         end

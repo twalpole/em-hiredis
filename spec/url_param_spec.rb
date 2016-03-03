@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # adapted from redis-rb
 require 'spec_helper'
 

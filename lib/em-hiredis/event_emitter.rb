@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module EventMachine::Hiredis
   module EventEmitter
     def on(event, &listener)

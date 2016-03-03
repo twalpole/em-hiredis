@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module IRedisMock
   def self.start(replies = {})
     @sig = EventMachine::start_server("127.0.0.1", 6381, Connection)
@@ -31,7 +32,7 @@ module IRedisMock
 
   class Connection < EventMachine::Connection
     def initialize
-      @data = ""
+      @data = String.new("")
       @parts = []
     end
 
@@ -57,7 +58,7 @@ module IRedisMock
         @parts = @parts[num_parts..-1]
 
         # Discard length declarations
-        command_line = 
+        command_line =
             command_parts
               .reject { |p| p[0] == '*' || p[0] == '$' }
               .join ' '

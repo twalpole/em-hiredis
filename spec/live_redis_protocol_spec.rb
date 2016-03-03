@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'spec_helper'
 
 describe EventMachine::Hiredis, "connected to an empty db" do
